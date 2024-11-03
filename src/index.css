@@ -1,0 +1,282 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+.font-iransans {
+  font-family: 'IRANSans';
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.rmdp-container {
+  width: 100%;
+}
+
+.rmdp-input {
+  width: 100%;
+  height: 40px !important;
+  text-align: left;
+}
+
+.rmdp-rtl .rmdp-range-hover.start:not(.force),
+.rmdp-rtl .rmdp-range.start:not(.force),
+.rmdp-rtl .rmdp-range-hover.end:not(.force),
+.rmdp-rtl .rmdp-range.end:not(.force) {
+  border-radius: 5px;
+}
+
+.rmdp-range {
+  background-color: #07637a41 !important;
+  color: #0f172a !important;
+  box-shadow: none !important;
+}
+
+.rmdp-day.rmdp-range:is(.start, .end) {
+  background-color: #07637a !important;
+
+  color: #ffffff !important;
+}
+.rmdp-day .rmdp-range .start {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.rmdp-calendar-container-mobile {
+  position: absolute !important;
+  background-color: #fff;
+  /* right: 50%; */
+  /* left: unset !important; */
+  top: -17px !important;
+  box-shadow: 0 0 5px #8798ad;
+}
+.rmdp-shadow {
+  box-shadow: unset !important;
+}
+.rmdp-action-buttons.rmdp-rtl {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.rmdp-button.rmdp-action-button {
+  border-top: 1px solid;
+  margin: 0;
+}
+
+/* Calender */
+.dark .rmdp-wrapper {
+  background: #262e34 !important;
+}
+.dark .rmdp-arrow-container:hover {
+  background: #191b1f;
+  color: #fff;
+}
+
+.rmdp-arrow {
+  border-color: #3fd4d2 !important;
+}
+
+.chakra-menu__menu-list {
+  border-top-left-radius: 0 !important;
+}
+
+.dark .rmdp-calendar-container-mobile {
+  background: #262e34 !important;
+  border: 1.5px solid #00e8dd;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  box-shadow: unset;
+}
+.rmdp-input {
+  text-align: right !important;
+  background-color: #000;
+  border-color: #262e34;
+}
+.dark .rmdp-mobile {
+  background: unset;
+}
+
+.dark .rmdp-top-class {
+  border: 1px solid #00a7a7;
+  background: #20262d;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.dark .rmdp-header-values {
+  color: #fff !important;
+}
+.dark .rmdp-header {
+  background-color: rgb(13 17 22);
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+.dark .rmdp-week-day {
+  color: #3fd4d2 !important;
+}
+.dark .rmdp-day.rmdp-today span {
+  background: #191b1f;
+  color: #fff;
+}
+.dark .rmdp-day span {
+  color: #ffffff;
+}
+.dark .rmdp-month-picker,
+.dark .rmdp-year-picker {
+  background: #20262d !important;
+  border: none;
+
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  box-shadow: unset;
+}
+.dark .divider {
+  background-color: #ffc300;
+}
+.dark .headerWrapper {
+  background-color: rgb(33, 37, 50);
+}
+.dark .rmdp-action-button {
+  background-color: transparent;
+  color: #00e8dd;
+
+  -webkit-transition:
+    background-color 0.15s,
+    color 0.15s;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+.dark .rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover {
+  border: 1px solid #00e8dd;
+  background-color: transparent;
+  color: #00e8dd;
+}
+.dark .rmdp-selected span {
+  background-color: #00a7a7 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .rmdp-calendar-container-mobile {
+    top: 19px !important;
+  }
+}
+
+.rmdp-wrapper {
+  direction: rtl;
+  width: 100% !important;
+}
+
+.rmdp-rtl {
+  width: 100%;
+}
+
+.rmdp-week,
+.rmdp-ym {
+  width: 100%;
+}
+
+.rmdp-calendar-container-mobile {
+  right: 0px;
+}
+
+.rmdp-wrapper {
+  width: 100%;
+}
+
+.rmdp-day-picker > div:nth-child(1) {
+  width: 100%;
+}
