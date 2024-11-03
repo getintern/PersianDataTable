@@ -36,7 +36,7 @@ export default function DateRange({ onChange }) {
   }, [values]);
 
   return (
-    <div className="relative ml-2 flex min-w-60 max-w-96 items-center self-baseline rounded-md border border-input bg-black py-1 sm:mb-0">
+    <div className="relative ml-2 flex min-w-60 max-w-96 items-center self-baseline rounded-md border border-input bg-black py-1 focus-within:border-gray-50 sm:mb-0">
       <div className="absolute right-0 flex h-full items-center justify-center rounded-r-md border-l border-input bg-zinc-800/50 px-1">
         <HiOutlineCalendarDays className="h-5 w-5" />
       </div>
@@ -49,7 +49,7 @@ export default function DateRange({ onChange }) {
 
           return props;
         }}
-        inputClass="bg-black cursor-pointer mr-10 text-sm"
+        inputClass="bg-black cursor-pointer mr-10 text-sm focus:outline-none focus:border-transparent"
         numberOfMonths={2}
         value={values}
         dateSeparator=" تا "
