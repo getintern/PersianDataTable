@@ -1,6 +1,7 @@
 import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
 import { MixerHorizontalIcon } from '@radix-ui/react-icons';
 
+import { columnDisplayNames } from '@/constant/columnNames';
 import { Button } from '../ui/button';
 import {
   DropdownMenu,
@@ -33,7 +34,7 @@ export function DataTableViewOptions({ table }) {
                 checked={column.getIsVisible()}
                 onCheckedChange={(value) => column.toggleVisibility(!!value)}
               >
-                {column.id}
+        {columnDisplayNames[column.id] || column.id}
               </DropdownMenuCheckboxItem>
             );
           })}
