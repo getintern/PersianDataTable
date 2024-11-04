@@ -165,7 +165,7 @@ module.exports = {
   		backgroundSize: {
   			'300%': '300%'
   		},
-  		MyFont: ["iransans"]
+
   	}
   },
   plugins: [require("tailwindcss-animate")],

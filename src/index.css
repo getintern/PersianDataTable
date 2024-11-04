@@ -95,10 +95,7 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-body,
-.font-iransans {
-  font-family: 'IRANSans';
-}
+
 body::-webkit-scrollbar {
   display: none;
 }
