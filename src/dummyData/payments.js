@@ -42,3 +42,21 @@ export const payments = [
     email: 'carmella@hotmail.com',
   },
 ];
+
+// Function to generate random data
+function generateRandomPayment() {
+  const statuses = ['success', 'failed', 'processing'];
+  const emails = ['ken99@yahoo.com', 'Abe45@gmail.com', 'Monserrat44@gmail.com', 'Silas22@gmail.com', 'carmella@hotmail.com'];
+  const id = Math.random().toString(36).substr(2, 9);
+  const createdDate = new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000).toISOString();
+  const price = Math.floor(Math.random() * 10000000);
+  const status = statuses[Math.floor(Math.random() * statuses.length)];
+  const email = emails[Math.floor(Math.random() * emails.length)];
+
+  return { id, createdDate, price, status, email };
+}
+
+// Add 20 more items
+for (let i = 0; i < 20; i++) {
+  payments.push(generateRandomPayment());
+}
